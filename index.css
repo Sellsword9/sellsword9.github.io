@@ -1,0 +1,58 @@
+body
+{
+    background-color: black;
+}
+.container
+{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 20vh 10vh 70vh;
+    grid-template-areas: "header  header"
+                         "nav     aside"
+                         "article aside";
+    background-color: black;
+    border: 0.1px solid wheat;
+}
+
+header
+{
+    grid-area: header;
+    background-color: rgb(13, 2, 24);
+    font-size: xx-large;
+    color: wheat;
+}
+
+nav
+{
+    grid-area: nav;
+    background-color: rgb(59, 21, 97);
+}
+
+aside
+{
+    grid-area: aside;
+    background-color: rgb(2, 9, 32);
+    color: wheat;
+}
+
+article
+{
+    grid-area: article;
+    background-color: rgb(7, 4, 20);
+    color: wheat;
+}
+article > div
+{
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid wheat
+}
+article > div > p
+{
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: large;
+    align-self: center;
+    border: 1px solid white;
+}
