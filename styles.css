@@ -1,6 +1,23 @@
 :root {
   background-color: rgb(27, 27, 27);
   color: goldenrod;
+
+  & a:link {
+    color: rgb(15, 143, 15);
+  }
+
+  & a:visited {
+    color: rgb(143, 15, 130);
+  }
+
+  & a.goback {
+    color: rgb(15, 143, 15) !important;
+    font-size: 2rem;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 1.3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-decoration: none;
+  }
 }
 
 pre code {
