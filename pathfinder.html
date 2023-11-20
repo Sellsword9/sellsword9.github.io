@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Path finding algorithm</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    #board {
+      display: grid;
+      grid-template-columns: repeat(30, 20px);
+      margin: 10px auto;
+    }
+
+    .path {
+      background-color: #1d721d;
+      width: 20px;
+      height: 20px;
+      border: 1px solid wheat;
+    }
+
+    .wall {
+      background-color: #ff4444;
+      width: 20px;
+      height: 20px;
+      border: 1px solid wheat;
+    }
+
+    h1.tempTODO {
+      font-size: 4rem;
+      color: wheat;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="tempTODO">Still under construction</h1>
+  <div id="board" class="board"></div>
+  <script src="pathfinder.js"></script>
+</body>
+
+</html>
