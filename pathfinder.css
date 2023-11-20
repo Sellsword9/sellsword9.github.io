@@ -1,0 +1,46 @@
+#board {
+  display: grid;
+  grid-template-columns: repeat(30, 20px);
+  margin: 10px auto;
+}
+
+.path {
+  background-color: #1d721d;
+  width: 20px;
+  height: 20px;
+  border: 1px solid wheat;
+}
+
+.wall {
+  background-color: #ff4444;
+  width: 20px;
+  height: 20px;
+  border: 1px solid wheat;
+}
+
+.path-start {
+  background-color: springgreen !important;
+}
+
+.path-end {
+  background-color: deepskyblue !important;
+}
+
+
+.path-found {
+  background-color: aqua;
+}
+
+button {
+  background-color: #9999ff !important;
+  position: relative;
+  margin: 0 auto;
+}
+
+h1.tempTODO {
+  font-size: 4rem;
+  color: wheat;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
