@@ -1,0 +1,23 @@
+:root {
+  background-color: rgb(27, 27, 27);
+  color: goldenrod;
+  margin: 0;
+  padding: 20px;
+}
+
+input,
+button,
+a {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: goldenrod;
+  border: none;
+  cursor: pointer;
+}
+
+canvas {
+  margin-top: 20px;
+  border: 2px solid goldenrod;
+}
