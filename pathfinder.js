@@ -1,7 +1,9 @@
 const numRows = 30;
 const numCols = 30;
+const board = document.getElementById('board');
+let points;
+
 function createBoard() {
-  const board = document.getElementById('board');
   board.innerHTML = '';
   for (let row = 0; row < numRows; row++) {
     for (let col = 0; col < numCols; col++) {
@@ -133,25 +135,22 @@ function sleep(ms) {
 function resetBoard() {
   createBoard();
   generateWalls();
-  generateStartingPoints(false, false);
-}
-function startInfinitePathfinding() {
-  let c = 1;
-  while (true) {
-    generatePath(points[0], points[1], 200)
-    resetBoard();
-    if (c > 100) { break; }
-    c++;
-  }
+  points = generateStartingPoints(false, false);
 }
 createBoard();
 generateWalls();
 points = generateStartingPoints(false, false);
 document.getElementById('start-pathfinding').addEventListener('click', () => {
-  generatePath(points[0], points[1], 200);
+  generatePath(points[0], points[1], 200).then
+    ((result) => {
+      if (result) {
+        console.log("Path found!");
+      } else {
+        console.log("Path not found!");
+        alert("Path not found, tring again!");
+        resetBoard();
+        generatePath(points[0], points[1], 200);
+      }
+    });
 });
 document.getElementById('reset').addEventListener('click', resetBoard);
-// document.getElementById('start-pathfinding-infinite').addEventListener('click', () => {
-//   resetBoard();
-//   startInfinitePathfinding();
-// });
